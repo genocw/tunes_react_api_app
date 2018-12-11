@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Song = ({artist, title, position}) => (
+const Song = (props) => (
   <>
-    <h3>{position}. {title}</h3>
-    <h5>by {artist}</h5>
+    <h3>{props.position}. {props.title}</h3>
+    <h4> By {props.artist}</h4>
+    <p>{props.genre}</p>
+    <p>Released on: {props.release}</p>
+    <a href={props.link}><p>View in iTunes</p></a>
+    <img src={props.image}/>
   </>
 )
 
